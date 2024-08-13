@@ -1,0 +1,1051 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 25px; /* Jarak dari bawah halaman */
+    right: 20px; /* Jarak dari kanan halaman */
+    z-index: 1000; /* Agar ikon muncul di atas elemen lain */
+    background-color: #25D366; /* Warna latar belakang ikon */
+    border-radius: 50%; /* Membuat ikon menjadi bulat */
+    padding: 15px; /* Jarak di sekitar gambar */
+    color: white; /* Warna ikon */
+    text-decoration: none; /* Menghapus garis bawah di tautan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan untuk tampilan lebih baik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px; /* Ukuran ikon WhatsApp yang lebih besar */
+    transition: transform 0.3s ease-in-out; /* Animasi zoom yang halus */
+}
+
+#whatsapp-icon:hover {
+    transform: scale(1.1); /* Membesarkan ikon saat hover */
+}
+
+.whatsapp-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.whatsapp-icon-img {
+    width: 40px; /* Ukuran gambar ikon */
+    height: 40px; /* Ukuran gambar ikon */
+    transition: transform 0.3s ease-in-out; /* Animasi zoom pada gambar */
+}
+
+#whatsapp-icon:hover .whatsapp-icon-img {
+    transform: scale(1.1); /* Membesarkan gambar ikon saat hover */
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #121212;
+    color: #f4f4f4;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #333;
+}
+
+/* 
+body {
+    background: #f3f4f6;
+} */
+/* 
+body {
+
+    color: #fff;
+} */
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Gaya untuk logo ISHOP */
+.logo {
+    font-family: 'Raleway', sans-serif; /* Font yang menarik dan modern */
+    font-size: 1.80rem; /* Ukuran font yang menonjol */
+    font-weight: bold; /* Font-weight tebal */
+    color: #d9c2d2; /* Warna emas untuk daya tarik visual */
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transisi yang halus */
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    color: #fff; /* Warna teks saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk efek depth */
+}
+
+
+ul li {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ddd;
+}
+
+ul li i {
+    margin-right: 0.5rem;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: #1e1e1e;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    margin-top: 4rem; /* Adjust for fixed navbar */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background: #ff5722;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.products {
+    padding: 2rem 0;
+    background: #fff;
+    text-align: center;
+    margin-top: 4rem; /* Adjust for fixed navbar */
+}
+
+.products h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus */
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0.5rem;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+    transform: scale(1.08); /* Zoom hingga 1.1x */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
+    z-index: 10; /* Membawa elemen ke depan */
+  }
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-card .btn {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .contact {
+    padding: 2rem 0;
+    background: #f4f4f4;
+    text-align: center;
+    color: #333;
+}
+
+
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-about p,
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+.about {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #e91e63;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+.about p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.mission, .values, .team, .contact-info {
+    margin-bottom: 50px;
+}
+
+.mission h3, .values h3, .team h3, .contact-info h3 {
+    font-size: 28px;
+    color: #e91e63;
+    margin-bottom: 20px;
+    text-align: center; /* Ensures h3 elements are centered */
+}
+
+.mission p {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: justify;
+    color: #666;
+}
+
+.values {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.value-card {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 40px;
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.value-card h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px; /* Ensures the image is displayed as a square */
+    object-fit: cover; /* Ensures image covers the box without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info i {
+    color: #e91e63;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .values {
+        flex-direction: column;
+    }
+
+    .value-card {
+        max-width: 100%;
+    }
+
+    .team-member {
+        width: 90%;
+    }
+
+    .mission p, .contact-info p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.contact {
+    display: none;
+    margin-top: 20px;
+}
+.toggle-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+.toggle-icon:hover,
+.toggle-icon:active {
+    transform: scale(1.5);
+}
+
+
+
+#contact-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: url('path/to/your/image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.contact-toggle {
+    position: relative;
+    z-index: 2;
+    background-color: #2980b9;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-toggle:hover {
+    background-color: #1f618d;
+    transform: translateY(-2px);
+}
+
+.contact {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.contact h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact label {
+    font-size: 1em;
+    color: #34495e;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    font-size: 0.9em;
+    color: #2c3e50;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+    border-color: #2980b9;
+    background-color: #ffffff;
+}
+
+.contact textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact .btn {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #1f618d;
+    transform: translateY(-2px);
+}
+
+.contact .btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 25px 15px;
+    }
+
+    .contact h2 {
+        font-size: 1.8em;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+        font-size: 0.85em;
+    }
+
+    .contact .btn {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 20px 10px;
+    }
+
+    .contact h2 {
+        font-size: 1.5em;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+        font-size: 0.8em;
+    }
+
+    .contact .btn {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #fff;
+    height: 2px;
+    width: 25px;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+#nav-menu .close-btn {
+    display: none;
+    background: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        background: #333;
+        padding: 2rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        align-items: center;     /* Rata tengah secara horizontal */
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    #nav-menu li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-menu .close-btn {
+        display: block;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+  
+
+.product-grid {
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk memberi jarak ke tombol */
+}
+
+.see-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pagination a.active {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+.pagination .dots {
+    cursor: default;
+    pointer-events: none;
+}
+
+
+
+
+/* Gaya untuk ikon next */
+.next-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.next-icon:hover {
+    color: gray;
+}
+
+/* Gaya untuk gambar di dalam modal */
+.modal-content img {
+    max-width: 100%; /* Gambar tidak akan lebih lebar dari modal */
+    max-height: 300px; /* Batasi tinggi maksimal gambar */
+    display: block; /* Agar gambar menempati seluruh ruang */
+    margin: 20px auto; /* Rata tengah dengan margin atas dan bawah */
+    border-radius: 8px; /* Tambahkan sedikit border-radius untuk estetika */
+}
+
+/* Gaya untuk ikon next dan prev */
+.modal-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev-icon, .next-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.prev-icon {
+    left: 20px;
+}
+
+.next-icon {
+    right: 20px;
+}
+
+.prev-icon:hover, .next-icon:hover {
+    color: gray;
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease; /* Animation for fade */
+    overflow: hidden; /* Prevent scrolling within the modal */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto; /* Sesuaikan margin atas untuk memindahkan posisi modal ke atas */
+    padding: 20px;
+    border: 5px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: black; /* Change text color to black */
+    position: relative; /* Add position relative for positioning next icon */
+    animation: slideIn 0.5s ease; /* Animation for slide */
+    transform: translateY(-50px); /* Start position for slide animation */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation for slide */
+    opacity: 0; /* Start invisible */
+    position: relative; /* Add position relative for positioning next icon */
+    animation: slideIn 0.5s ease; /* Animation for slide */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Additional styles for modal content */
+.modal-content {
+    transform: translateY(0); /* End position */
+    opacity: 1; /* End visible */
+}
+
+/* Product container */
+#product-container {
+    display: flex;
+    gap: 10px;
+}
+
+.product-card {
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+
+/* Gaya untuk deskripsi penuh yang tersembunyi */
+#modalDescriptionFull.hide {
+    display: none;
+}
+
+#modalDescriptionFull.show {
+    display: block;
+}
+
+/* Gaya untuk link "Selengkapnya" */
+.show-more {
+    display: block;
+    margin-top: 10px;
+    color: #007bff; /* Ganti dengan warna sesuai tema */
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.show-more:hover {
+    color: #0056b3; /* Ganti dengan warna hover sesuai tema */
+}
+
+
+
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Blurred background when modal is open */
+.modal-open .products {
+    filter: blur(5px);
+}
+
+/* Slide-in and slide-out animations */
+.modal.show {
+    display: block;
+    opacity: 1; /* Fade-in effect */
+    transform: scale(1) translateY(0); /* Zoom to normal size and slide to position */
+}
+
+.modal-content.show {
+    transform: translateY(0); /* Slide-in effect */
+    opacity: 1; /* Make content visible */
+}
+
+.modal-content.hide {
+    transform: translateY(50px); /* Slide-out effect */
+    opacity: 0; /* Make content invisible */
+}
+
+.modal.hide {
+    opacity: 0; /* Fade-out effect */
+    transform: scale(1.1) translateY(30px); /* Zoom out slightly and slide down */
+}
+
+
+.modal-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #4CAF50; /* Ganti sesuai dengan gaya yang diinginkan */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.modal-btn:hover {
+    background-color: #45a049; /* Ganti sesuai dengan gaya yang diinginkan */
+}
